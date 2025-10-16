@@ -1,9 +1,9 @@
 library(readr)
 library(stringr)
 
-CSV = "table_12.csv"
+CSV = "table_18.csv"
 
-data <- read_csv(CSV, na = c("", "- ", "I ", "-", "I", "i", "[ ] -", "---", "----", "|", "!"))
+data <- read_csv(CSV, na = c("", "- ", "I ", "-", "I", "i", "[ ] -", "---", "----", "|", "!", "—", "--", "-------------------------", "?"))
 
 write_csv(data, str_c("cleaned-", CSV), na="")
 
